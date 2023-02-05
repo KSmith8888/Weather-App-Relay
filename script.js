@@ -15,7 +15,7 @@ weatherForm.addEventListener("submit", async (event) => {
     weatherHighLow.textContent = "";
     try {
         const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${searchtext}&units=imperial&appid=test`
+            `https://api-proxy-server-production-dfe7.up.railway.app/weather/${cityNameInput.value}`
         );
         if (response.ok) {
             const data = await response.json();
