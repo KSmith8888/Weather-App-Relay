@@ -29,6 +29,10 @@ weatherForm.addEventListener("submit", async (event) => {
                 throw new Error(
                     "Please do not include special characters in your request"
                 );
+            } else if (response.status === 429) {
+                throw new Error(
+                    "Request limit reached, please wait before making any more requests"
+                );
             } else {
                 throw new Error(
                     "Not found, please make sure the city name is spelled correctly"
