@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src 'self' https://api-proxy-server-production-dfe7.up.railway.app/; base-uri 'self'; img-src 'self'"
+        />
+        <link href="./styles.css" rel="stylesheet" />
+        <script src="./script.js" defer></script>
+        <title>Weather App</title>
+    </head>
+    <body>
+        <main id="main">
+            <h1>Weather App</h1>
+            <form id="weather-form">
+                <label for="city-name-input" id="city-name-label"
+                    >Search by city:</label
+                >
+                <input type="text" maxlength="20" id="city-name-input" />
+                <button id="get-weather-data-btn" type="submit">
+                    Get Weather
+                </button>
+            </form>
+            <h2 id="weather-city">Enter a city to search</h2>
+            <p id="weather-temp" class="weather-item"></p>
+            <p id="weather-feels-like" class="weather-item"></p>
+            <p id="weather-description" class="weather-item"></p>
+            <p id="weather-high-low" class="weather-item"></p>
+        </main>
+    </body>
+</html>
